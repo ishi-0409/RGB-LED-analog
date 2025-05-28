@@ -26,8 +26,7 @@
 
 ## 🔌 ブレッドボード図
 
-![ブレッドボード図](breadboard-diagram.png)
-
+![ブレッドボード図](breadboard-diagram.png.png)
 
 この作品について
 
