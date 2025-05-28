@@ -1,0 +1,46 @@
+import RPi.GPIO as GPIO
+import ADC0834
+GPIO.setmode(GPIO.BCM)
+from time import sleep
+
+RED=23
+GREEN=24
+BLUE=21
+
+GPIO.setup(RED,GPIO.OUT)
+GPIO.setup(GREEN,GPIO.OUT)
+GPIO.setup(BLUE,GPIO.OUT)
+
+REDpwm=GPIO.PWM(RED,1000)
+GREENpwm=GPIO.PWM(GREEN,1000)
+BLUEpwm=GPIO.PWM(BLUE,1000)
+
+REDpwm.start(0)
+GREENpwm.start(0)
+BLUEpwm.start(0)
+
+ADC0834.setup()
+
+try:
+    while True:
+        REDanalog=ADC0834.getResult(0)
+        GREENanalog=ADC0834.getResult(1)
+        BLUEanalog=ADC0834.getResult(2)
+        print('red=',REDanalog,'green=',GREENanalog,'blue=',BLUEanalog)
+        REDDC=REDanalog*100/255
+        GREENDC=GREENanalog*100/255
+        BLUEDC=BLUEanalog*100/255
+        REDpwm.ChangeDutyCycle(REDDC)
+        GREENpwm.ChangeDutyCycle(GREENDC)
+        BLUEpwm.ChangeDutyCycle(BLUEDC)
+        if REDDC<=5 or GREENDC<=5 or BLUEDC<=5:
+            REDDC==0,GREENDC==0,BLUEDC==0
+        sleep(0.3)
+except KeyboardInterrupt:
+    GPIO.cleanup()
+
+
+
+
+
+    
