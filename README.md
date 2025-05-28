@@ -23,11 +23,11 @@
 
 - Raspberry Pi LESSON 17: Mixing Any Color on an RGB LED　[https://www.youtube.com/watch?v=7_XH4MbDPZ0&t=264s]
 
-## 🔌 ブレッドボード接続図
 
-下図は本プロジェクトの全体配線図です。Raspberry Pi 4、ADC0834、RGB LED、ポテンショメーター、ボタンを組み合わせています。
+## 🔌 ブレッドボード図
 
-![ブレッドボード図](53ae555c-10be-4372-a795-82e02b72e7ca.png)
+![ブレッドボード図](breadboard-diagram.png)
+
 
 
 この作品について
