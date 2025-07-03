@@ -33,5 +33,9 @@
 この作品の構想、配線設計、機能設計、そして調整過程のドキュメント作成は  
 **ChatGPT（OpenAI）との対話を通じて進めました。**  
 
+## ライセンス
+このプロジェクトの一部コードは SunFounder Da Vinci Kit に基づき、
+GNU General Public License v2（またはそれ以降）の条件で公開されています。
+詳細は LICENSE ファイルをご覧ください。
 
 
